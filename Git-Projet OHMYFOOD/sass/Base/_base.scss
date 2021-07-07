@@ -1,0 +1,73 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.bloc-page {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    @include bigDesktop{
+        max-width: 1800px;
+        margin: auto;
+     }
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    @include bigDesktop{
+           max-width: 1800px;
+           margin: auto;
+        }
+}
+footer{
+  background-color: #353535;  
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-texte;
+    padding: 25px;
+    @include desktop{
+    padding: 40px;
+    }
+
+   .logo-blanc{
+    font-family: "Shrikhand", cursive;
+    @include tablette-only{
+        font-size:1.5rem;
+    }
+    @include desktop{
+        font-size: 2rem;
+    }
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        @include desktop{
+        display: flex;
+        justify-content: space-between;}
+        @include tablette-only{
+        display: flex;
+        justify-content: space-between;       
+        }
+        
+        li{
+            padding-bottom: 8px;
+            
+            @include desktop{
+            font-size: 1.3rem;
+            }
+            i{
+                padding-right:10px;
+                
+            }
+        }
+    }
+}
+
+header{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}

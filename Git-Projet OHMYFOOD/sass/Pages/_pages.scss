@@ -1,0 +1,179 @@
+.block-page{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: $bgcolor-primary;
+}
+.display-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    @include desktop{
+        flex-direction:row;
+    }
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 0 2% 0 2%;
+    &__btn{
+    @include menu-btn;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:space-between;
+    @include tablette-only{
+        height:100px;
+    }
+        }
+}
+.btn-content{
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        padding: 10px 20px 5px 10px;
+        flex-direction: column;
+
+    &__title{font-size: 1rem;
+            font-weight: bold;
+            margin: 0;
+            @include tablette-only{
+                font-size: 1.5rem;
+            }
+             }    
+    &__details{
+        display: flex;
+        justify-content: space-between;}
+    &__additional{font-size: 0.8rem;
+            margin-bottom: 0;
+        @include tablette-only{
+            font-size: 1.1rem;
+        }
+        }
+        
+    &__price{
+        font-size: 1rem;
+        display: flex;
+        align-items: flex-end;
+        @include tablette-only{
+            font-size: 1.3rem;
+        }
+    }
+    
+}
+.restau-pres{ 
+    display: flex;
+    flex-direction: column;
+    
+    &__img{
+        width:100%;
+        @include desktop{
+            height:500px;
+            width:100%;
+            object-fit: cover;
+        }
+        
+    }
+    &__texte{
+        
+        border-radius: 30px 30px 0 0; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bgcolor-primary; 
+        width: 100%;
+        margin-top: -50px;
+        box-sizing: border-box;
+        padding: 20px;
+            h1{
+                margin: 0;
+            }  
+            i{
+                font-size: 1.2rem;
+                margin-right: 30px;
+                @include tablette-only{
+                    font-size: 1.6rem;
+                }
+                @include desktop {
+                    font-size: 2rem;
+                }
+            }
+    }
+    &__title{
+        font-family: $font-titres;
+        font-size: 1.5rem;
+        @include tablette-only{
+        font-size: 2.2rem;
+        }
+        @include desktop{
+            font-size: 2.5rem; 
+        }
+    }
+}
+.block-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: $bgcolor-primary;
+    width:100%;
+    padding-bottom: 2%;
+    font-family: $font-texte;
+   
+        &__title{
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding-bottom: 5px;
+            border-bottom: 3px solid $color-tertiary;
+            width: 35px;
+            margin-left: 5%;
+
+            @include tablette-only{
+                font-size: 1.4rem;
+                width: 45px;
+            }
+            @include desktop{
+                font-size: 1.4rem;
+                margin-left: 4%;
+                width: 45px;
+            }
+        }
+}
+
+.fleche{
+    border:none;
+    background-color: inherit;
+    position: absolute;
+    top:23px;
+    left:20px;
+    font-size: 1.3rem;
+    @include tablette-only{
+        font-size: 1.4rem;
+        top:27px;
+        left:20px;
+    }
+    @include desktop{
+        font-size: 1.4rem;
+        top:27px;
+        left:20px;
+    }
+    
+    
+}
+.btn-order{
+    @include btn-couleur;
+    width: 185px;
+    height: 50px;
+    margin:45px;
+    @include tablette-only{
+        width: 278px;
+        height: 75px; 
+        font-size: 1.5rem;  
+    }
+    @include desktop{
+        width: 278px;
+        height: 75px; 
+        font-size: 1.5rem;  
+    }
+}
