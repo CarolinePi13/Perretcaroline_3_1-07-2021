@@ -15,28 +15,57 @@
     }
 }
 .menu{
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
     padding: 0 2% 0 2%;
     &__btn{
-    @include menu-btn;
-    box-sizing: border-box;
     display: flex;
-    justify-content:space-between;
+    overflow: hidden;
+    @include menu-btn;
     @include tablette-only{
-        height:100px;
+    height:100px;
     }
+    }    
+    
+    &__check{
+        background-color: $color-tertiary;
+        margin-right: -15%;
+        width:15%;
+        height: 100%;
+        border-radius: 0 20px 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 600ms ease-in-out;
+        opacity: 1;
+     
+        i{
+            color: white;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            @include tablette-only{
+                font-size: 2rem;
+            }
         }
+    }
 }
 .btn-content{
+    
         width: 100%;
         box-sizing: border-box;
         display: flex;
         padding: 10px 20px 5px 10px;
         flex-direction: column;
-
+        &:hover + .menu__check{
+            transform: translate(-100%,0);
+            opacity: 1;
+        }
     &__title{font-size: 1rem;
             font-weight: bold;
             margin: 0;
@@ -46,9 +75,13 @@
              }    
     &__details{
         display: flex;
-        justify-content: space-between;}
+        justify-content: space-between;
+        @include desktop{
+        align-items: flex-start;}
+       }
     &__additional{font-size: 0.8rem;
             margin-bottom: 0;
+            margin-top:13px;
         @include tablette-only{
             font-size: 1.1rem;
         }
@@ -58,6 +91,7 @@
         font-size: 1rem;
         display: flex;
         align-items: flex-end;
+        margin-top:13px;
         @include tablette-only{
             font-size: 1.3rem;
         }
