@@ -82,7 +82,7 @@
         border-radius: 30px 30px 0 0; 
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        
         background-color: $bgcolor-primary; 
         width: 100%;
         margin-top: -50px;
@@ -91,14 +91,39 @@
             h1{
                 margin: 0;
             }  
-            i{
+            .heart{
                 font-size: 1.2rem;
                 margin-right: 30px;
+                position: relative;
+                padding-top: 10px;
+                padding-right:5px;
+                .empty{
+                    position: absolute;
+                    -webkit-background-clip: text;
+                    z-index: 2;
+                    opacity: 1;}
+                    .full{
+                    position: absolute;
+                    background-image: linear-gradient(50deg,$color-primary,$color-secondary);
+                    color: transparent;
+                    -webkit-background-clip:text;
+                    opacity: 0;
+                    z-index: 1;
+                    }
+                    &:hover{
+                
+                        & > .full{
+                            animation: fill-heart 1s both;
+                        }
+                        
+                    }
                 @include tablette-only{
                     font-size: 1.6rem;
+                    padding-right :10px;
                 }
                 @include desktop {
                     font-size: 2rem;
+                    padding-right: 20px;
                 }
             }
     }
@@ -166,6 +191,17 @@
     width: 185px;
     height: 50px;
     margin:45px;
+    z-index: 1;
+        position: relative;
+            &:hover{
+                
+                &::after{
+                opacity: 1;
+                }
+            }
+            &::after{
+                @include lighter-btn;
+            }
     @include tablette-only{
         width: 278px;
         height: 75px; 

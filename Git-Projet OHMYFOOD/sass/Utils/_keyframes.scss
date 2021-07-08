@@ -1,0 +1,32 @@
+@keyframes fill-heart{
+    0% {
+        
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    17% {
+        
+        transform: scaleY(.18);
+        opacity: .18;
+    }
+    24% {
+        transform: scaleY(.4);
+        opacity: .4;
+        transition-timing-function: ease-in-out;
+    }
+    46% {
+        transform: scaleY(.75);
+        opacity: .75;
+        transition-timing-function: ease-in-out;
+    }
+    80%{
+        transform: scaleY(.90);
+        opacity: .90;
+        transition-timing-function: ease-in-out;
+        
+    }
+    100% {
+        transform: scaleY(.95);
+        opacity: 1;
+    }
+}

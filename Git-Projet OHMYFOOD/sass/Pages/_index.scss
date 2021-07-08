@@ -132,13 +132,37 @@
         height: 20%; 
         justify-content: space-between;
         padding:15px 20px 10px 10px;
-        @include desktop{
-
-        }
-        i{
+        
+        .heart{
            font-size: 1.4rem; 
+            position: relative;
+            
+            .empty{
+            position: absolute;
+            right:10px;
+            -webkit-background-clip: text;
+            z-index: 2;
+            opacity: 1;}
+            .full{
+            position: absolute;
+            background-image: linear-gradient(50deg,$color-primary,$color-secondary);
+            color: transparent;
+            -webkit-background-clip:text;
+            opacity: 0;
+            z-index: 1;
+            right:10px;
+            }
+        
            @include desktop{
             font-size: 1.7rem;    
+            }
+            &:hover{
+                
+                & > .full{
+                    animation: fill-heart 1s both;
+                    
+                }
+                
             }
         } 
     }
@@ -252,6 +276,17 @@ header{
         color:white;
         font-weight: bold;
         font-size: 0.9rem;
+        z-index: 1;
+        position: relative;
+            &:hover{
+                
+                &::after{
+                opacity: 1;
+                }
+            }
+            &::after{
+                @include lighter-btn;
+            }
         @include tablette-only{
             font-size: 1.1rem;
             width: 250px;
