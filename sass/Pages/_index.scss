@@ -1,0 +1,388 @@
+/* proprietes propres a l'index*/
+.loader{
+    font-family:Shrikhand, cursive;
+    width:100vw;
+    height: 100vh;
+    font-size: 7rem;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: white, $alpha: 1);
+    z-index: 3; 
+    opacity: 0;
+    animation: loader-gone 2.5s ease-out 500ms both;
+    
+    .oh{
+        padding:1px;
+        background-image: linear-gradient(90deg, $color-primary, $color-primary, $color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba($color:white, $alpha: 0.2);
+        opacity:0;
+        display: inline-block;
+    animation: loader 1s ease-in-out 800ms both;
+    transform-origin: bottom center ;
+ 
+    }
+    .my{
+        padding:1px;
+        background-image: linear-gradient(90deg, $color-secondary, $color-secondary, $color-secondary, lighten($color-secondary, 2%));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba($color:white, $alpha: 0.2);
+        opacity:0;
+        display: inline-block;
+    animation: loader 1s ease-in-out 1s both;
+    transform-origin: bottom center ;
+    }
+    .food{
+        padding:1px 6px 1px 1px;
+        background-image: linear-gradient(90deg, $color-secondary, $color-secondary, $color-primary, $color-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: rgba($color:white, $alpha: 0.2);
+        opacity:0;
+        display: inline-block;
+    animation: loader 1s ease-in-out 1.2s both;
+    transform-origin: bottom center ;
+    }
+}
+/*Boutons de fonctionnement*/
+.fonctionnement{
+    font-family: $font-texte;
+    display: flex;
+    flex-direction: column;
+    
+    
+    @include tablette-only{
+        width: 99%;          
+    }
+    @include desktop{
+        width: 99%;          
+    }
+    
+    &__title{
+        padding-left: 20px;
+        font-size: 1.4rem;
+        width: 90%;
+       @include tablette-only{
+        padding-left: 30px; 
+       }
+       @include desktop{
+        padding-left: 40px;   }
+    }
+    &__nbr{
+        background-color: $color-primary;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+        position: relative;
+        right: 11px;
+    }
+    &__btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        justify-content: center;
+        @include tablette-only{
+            flex-direction: row;
+            -moz-column-gap: 4%;
+                 column-gap: 4%;
+            width: 95%;
+            margin:auto;
+        }
+        @include desktop{
+            flex-direction: row;
+            -moz-column-gap: 4%;
+                 column-gap: 4%;
+            width: 95%;
+            margin:auto;
+        }
+    }
+    
+    &__btn{
+    @include btn-fonct;
+    display: flex;
+    background-color: $bgcolor-primary;
+    align-items: center;
+    @include tablette-only{
+        height: 85px;
+        font-size: 1.1rem;
+    }
+    @include desktop{
+        height: 90px;
+        font-size: 1.3rem;
+    }
+        i{
+            color: #787878;
+            width:40px;
+            padding-left: 10px;
+        }
+    
+        &:hover {
+        background-color: $bgcolor-tertiary;
+        i{
+            color:$color-primary;
+        }
+     }
+     
+    }
+    
+}
+/* Carte Restaurant*/
+.card{
+    @include carte-size;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 30px;
+    font-family: $font-texte;
+    @include tablette-only{
+        width:45%;  
+    }
+    @include desktop{
+        width: 45%;
+        height: 350px;
+    }
+    img{
+        border-radius: 20px 20px 0 0;
+        width: 100%;
+        height: 70%;
+        z-index: 1;
+        -o-object-fit: cover;
+           object-fit: cover;
+        
+    }     
+    &__new{
+        font-size: 0.8rem;
+        height: 30px;
+        width: 80px;
+        position: absolute;
+        display: flex;
+        color: #259A7B;
+        background-color: #99E2D0;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 4px;
+        z-index: 2;
+        top: 0.8rem;
+        right: 1.5rem;  
+        @include tablette-only{
+            
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: row;
+        height: 20%; 
+        justify-content: space-between;
+        padding:15px 20px 10px 10px;
+        
+        .heart{
+           font-size: 1.4rem; 
+            position: relative;
+            
+            .empty{
+            position: absolute;
+            right:10px;
+            -webkit-background-clip: text;
+            z-index: 2;
+            opacity: 1;}
+            .full{
+            position: absolute;
+            background-image: linear-gradient(50deg,$color-primary,$color-secondary);
+            color: transparent;
+            -webkit-background-clip:text;
+            opacity: 0;
+            z-index: 1;
+            right:10px;
+            }
+        
+           @include desktop{
+            font-size: 1.7rem;    
+            }
+            &:hover{
+                
+                & > .full{
+                    animation: fill-heart 1s both;
+                    
+                }
+                
+            }
+        } 
+    }
+    &__title{
+        font-size: 1.1rem;
+        margin: 0;
+        font-weight: bold;
+      @include desktop{
+        font-size: 1.4rem;    
+        }
+        }
+    &__metro{ 
+        margin:8px 0;
+        @include desktop{
+            font-size: 1.2rem;    
+            }
+    }
+}
+
+
+header{
+        .logo{display: flex;
+       justify-content: center;
+       align-items: center;}
+        
+        img{
+            height:auto;
+            width:170px;
+            @include tablette-only{
+             width: 220px;
+            }
+            @include desktop{
+                width: 220px;
+            }
+        }
+    
+}
+.search-bar{
+    box-shadow: inset 0 6px 9px -6px #cdcdcd;
+    display:flex;
+    justify-content: center;
+    background-color:$bgcolor-secondary;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    @include tablette-only{
+        height: 25px;
+    }
+    @include desktop{
+        height: 25px;
+    }
+     &__input{
+         margin-left: 5px;
+        border:none;
+        background-color: $bgcolor-secondary;
+        width: 130px;
+        @include tablette-only{
+            font-size: 1.2rem;
+            width: 170px;
+            margin-left: 10px;
+        }
+        @include desktop{
+            font-size: 1.2rem;
+            width: 170px;
+            margin-left: 10px;
+        }
+     }
+     i{
+         @include tablette-only{
+         font-size: 1.4rem;}
+         @include desktop{
+            font-size: 1.4rem;}
+     }
+}
+.intro{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    @include bg-clr1;
+    font-family: $font-texte;
+    padding-bottom: 55px;
+    padding-top: 30px;
+    &__title{
+        width: 70%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        @include tablette-only{
+        font-size: 1.9rem;
+        }
+        @include desktop{
+            font-size: 1.9rem;
+            }
+    }
+    &__text{
+        width: 90%;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-weight: lighter;
+        font-size: 1.1rem;
+        @include tablette-only{
+            font-size: 1.3rem;
+            }
+        @include desktop{
+            font-size: 1.3rem;
+            }
+    }
+    &__btn{
+        @include btn-couleur;
+        height: 50px;
+        width: 220px;
+        color:white;
+        font-weight: bold;
+        font-size: 0.9rem;
+        z-index: 1;
+        position: relative;
+            &:hover{
+                
+                &::after{
+                opacity: 1;
+                }
+            }
+            &::after{
+                @include lighter-btn;
+            }
+        @include tablette-only{
+            font-size: 1.1rem;
+            width: 250px;
+            height: 55px;
+            }
+            @include desktop{
+                font-size: 1.1rem;
+                width: 250px;
+                height: 55px;
+                }
+    }
+}
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 30px;
+    margin-top: 60px;
+    @include bg-clr1;
+    
+    &__title{
+        font-family: $font-texte;
+        font-size: 1.4rem;
+        padding-left: 20px;
+        @include tablette-only{
+            padding-left: 30px;   }
+        @include desktop{
+            padding-left: 40px;   }
+    }
+    &__cards{
+    @include tablette-only{
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 3%;
+        justify-content: center;
+        
+    }
+    @include desktop{
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 3%;
+        justify-content: center;
+        
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+    
+   }
+
+

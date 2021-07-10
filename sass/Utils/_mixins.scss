@@ -1,0 +1,64 @@
+@mixin menu-btn{
+    width: 95%;
+    height: 70px;
+    background-color: white;
+    @include box-shadows;
+}
+@mixin carte-size {
+    width: 95%;
+    height: 255px;
+    @include box-shadows;
+}
+@mixin btn-fonct {
+    width: 90%;
+    min-height: 75px;
+    @include box-shadows;
+}
+@mixin box-shadows{
+    box-shadow: 2px 3px 5px 2px #e9e9e9;
+    border-radius: 20px;
+}
+@mixin bg-clr1{
+    background-color:#F6F6F6 ;
+}
+@mixin btn-couleur{
+    border-radius: 3rem;
+    
+    background-image: linear-gradient( 170deg, $color-secondary, $color-primary);
+    box-shadow: 2px 2px 4px 1px #cbcbca;
+    border:none;
+    color: white;
+}
+
+@mixin tablette-only {
+    @media (min-width: 620px) and (max-width: 1024px) {
+        @content
+      }
+  }
+ 
+@mixin desktop {
+    @media (min-width: 1025px) {
+        @content
+      }
+  }
+@mixin bigDesktop{
+    @media (min-width: 1800px){
+        @content
+    }
+}
+
+@mixin lighter-btn{
+    content: "";
+    position:absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background-image: linear-gradient( 170deg, lighten($color-secondary,5%) , lighten( $color-primary,5%));
+    box-shadow: 4px 4px 6px 1px #969693;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+    border-radius: 3rem;
+}
+

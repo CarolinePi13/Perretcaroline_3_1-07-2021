@@ -1,0 +1,16 @@
+{
+  "name": "git-projet-ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css",
+    "prefix": "./node_modules/.bin/postcss ./css/style.css --use autoprefixer -d ./css/prefixed"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6"
+  }
+}
