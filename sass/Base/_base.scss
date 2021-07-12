@@ -55,13 +55,15 @@ footer{
         
         li{
             padding-bottom: 8px;
-            
             @include desktop{
             font-size: 1.3rem;
             }
             i{
                 padding-right:10px;
                 
+            }
+            a{
+                color: white;
             }
         }
     }

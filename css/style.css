@@ -101,25 +101,29 @@
 @keyframes loader-gone {
   0% {
     opacity: 1;
-    z-index: 4;
   }
-  80% {
-    opacity: 0.9;
-    z-index: 4;
-  }
-  90% {
-    opacity: 0.7;
-    z-index: 4;
-  }
-  95% {
-    opacity: 0.3;
-    z-index: 4;
+  99% {
+    opacity: 0;
   }
   100% {
-    opacity: 0;
     z-index: -99;
   }
 }
+@keyframes menu-block {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes menu {}
+@keyframes menu-btn {}
 a {
   text-decoration: none;
   color: black;
@@ -201,6 +205,9 @@ footer ul li {
 footer ul li i {
   padding-right: 10px;
 }
+footer ul li a {
+  color: white;
+}
 
 header {
   padding-top: 20px;
@@ -218,9 +225,9 @@ header {
   justify-content: center;
   align-items: center;
   background-color: white;
-  z-index: 3;
+  z-index: 4;
   opacity: 0;
-  animation: loader-gone 2.5s ease-out 500ms both;
+  animation: loader-gone 800ms 1870.51ms both;
 }
 .loader .oh {
   padding: 1px;
@@ -230,7 +237,7 @@ header {
   color: rgba(255, 255, 255, 0.2);
   opacity: 0;
   display: inline-block;
-  animation: loader 1s ease-in-out 800ms both;
+  animation: loader 1s ease-in-out 500ms both;
   transform-origin: bottom center;
 }
 .loader .my {
@@ -241,7 +248,7 @@ header {
   color: rgba(255, 255, 255, 0.2);
   opacity: 0;
   display: inline-block;
-  animation: loader 1s ease-in-out 1s both;
+  animation: loader 1s ease-in-out 700ms both;
   transform-origin: bottom center;
 }
 .loader .food {
@@ -252,7 +259,7 @@ header {
   color: rgba(255, 255, 255, 0.2);
   opacity: 0;
   display: inline-block;
-  animation: loader 1s ease-in-out 1.2s both;
+  animation: loader 1s ease-in-out 1s both;
   transform-origin: bottom center;
 }
 
@@ -681,6 +688,7 @@ header img {
   align-items: center;
   box-sizing: border-box;
   row-gap: 20px;
+  animation: menu-block 700ms 500ms both;
   padding: 0 2% 0 2%;
 }
 .menu__btn {
@@ -814,6 +822,11 @@ header img {
 .restau-pres__img {
   width: 100%;
 }
+@media (min-width: 620px) and (max-width: 1024px) {
+  .restau-pres__img {
+    height: 450px;
+  }
+}
 @media (min-width: 1025px) {
   .restau-pres__img {
     height: 350px;
@@ -899,7 +912,9 @@ header img {
   background-color: #F6F6F6;
   width: 100%;
   padding-bottom: 2%;
+  opacity: 0;
   font-family: "Roboto", sans-serif;
+  animation: menu-block 700ms 350ms both;
 }
 .block-menu__title {
   text-transform: uppercase;

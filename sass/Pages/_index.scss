@@ -9,9 +9,10 @@
     justify-content: center;
     align-items: center;
     background-color: rgba($color: white, $alpha: 1);
-    z-index: 3; 
+    z-index: 4;
     opacity: 0;
-    animation: loader-gone 2.5s ease-out 500ms both;
+    animation: loader-gone 800ms 1870.51ms both;
+    
     
     .oh{
         padding:1px;
@@ -21,7 +22,7 @@
         color: rgba($color:white, $alpha: 0.2);
         opacity:0;
         display: inline-block;
-    animation: loader 1s ease-in-out 800ms both;
+    animation: loader 1s ease-in-out 500ms both;
     transform-origin: bottom center ;
  
     }
@@ -33,7 +34,7 @@
         color: rgba($color:white, $alpha: 0.2);
         opacity:0;
         display: inline-block;
-    animation: loader 1s ease-in-out 1s both;
+    animation: loader 1s ease-in-out 700ms both;
     transform-origin: bottom center ;
     }
     .food{
@@ -44,7 +45,7 @@
         color: rgba($color:white, $alpha: 0.2);
         opacity:0;
         display: inline-block;
-    animation: loader 1s ease-in-out 1.2s both;
+    animation: loader 1s ease-in-out 1s both;
     transform-origin: bottom center ;
     }
 }

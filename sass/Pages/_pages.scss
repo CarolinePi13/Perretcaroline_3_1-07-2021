@@ -20,7 +20,7 @@
     align-items: center;
     box-sizing: border-box;
     row-gap: 20px;
-    
+    animation: menu-block 700ms 500ms both;
     padding: 0 2% 0 2%;
     &__btn{
     @include menu-btn;
@@ -135,6 +135,9 @@
     
     &__img{
         width:100%;
+        @include tablette-only{
+            height: 450px;
+        }
         @include desktop{
             height:350px;
             width:100%;
@@ -216,8 +219,9 @@
     background-color: $bgcolor-primary;
     width:100%;
     padding-bottom: 2%;
+    opacity: 0;
     font-family: $font-texte;
-   
+   animation: menu-block 700ms 350ms both;
         &__title{
             text-transform: uppercase;
             font-size: 1rem;
