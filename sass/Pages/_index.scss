@@ -135,7 +135,7 @@
             padding-left: 10px;
         }
     
-        &:hover {
+        &:hover:active {
         background-color: $bgcolor-tertiary;
         i{
             color:$color-primary;
@@ -218,7 +218,7 @@
            @include desktop{
             font-size: 1.7rem;    
             }
-            &:hover{
+            &:hover:active{
                 
                 & > .full{
                     animation: fill-heart 1s both;
@@ -340,7 +340,7 @@ header{
         font-size: 0.9rem;
         z-index: 1;
         position: relative;
-            &:hover{
+            &:hover:active{
                 
                 &::after{
                 opacity: 1;

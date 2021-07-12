@@ -54,7 +54,7 @@
             animation: turn-check 800ms ease-in-out both;
         }}
         &:hover{ .btn-content__price{
-            animation: check-left 800ms ease-in-out both;
+            animation: check-left 800ms ease-in-out both; 
         }}
         &:hover{ .btn-content__additional{
             width:80%;
@@ -115,6 +115,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: check-left-reverse 800ms ease-in-out both; 
         @include tablette-only
         {
             height:90px;
@@ -307,4 +308,8 @@
         height: 75px; 
         font-size: 1.5rem;  
     }
+}
+.btn-center{
+    display: flex;
+    justify-content: center;
 }

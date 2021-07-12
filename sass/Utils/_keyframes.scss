@@ -41,6 +41,16 @@
         
     }
 }
+@keyframes check-left-reverse{
+    0%{
+        transform: translate(-60px,0);
+        
+    }
+    100%{
+        transform: translate(0);
+        
+    }
+}
 @keyframes check-left-tablette{
     0%{
         transform: translate(0);
