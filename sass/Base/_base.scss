@@ -3,12 +3,11 @@ a{
     color: black;
 }
 
-.bloc-page {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
+.block-page {
+    
+    width: 100%;
     @include bigDesktop{
-        max-width: 1800px;
+        max-width: 1600px;
         margin: auto;
      }
 }
@@ -16,10 +15,7 @@ a{
 body{
     width: 100%;
     margin: 0;
-    @include bigDesktop{
-           max-width: 1800px;
-           margin: auto;
-        }
+   
 }
 footer{
   background-color: #353535;  
@@ -72,4 +68,5 @@ footer{
 header{
     padding-top: 20px;
     padding-bottom: 10px;
+    position: relative;
 }

@@ -1,9 +1,17 @@
 /* proprietes propres a l'index*/
+.loader-container{
+    
+    width: 100%;
+    
+    
+}
 .loader{
-    font-family:Shrikhand, cursive;
-    width:100vw;
+    font-family: Shrikhand, cursive;
+    box-sizing: border-box;
+    width:100%;
+    margin: auto;
     height: 100vh;
-    font-size: 7rem;
+    font-size: 2rem;
     position:fixed;
     display: flex;
     justify-content: center;
@@ -12,8 +20,7 @@
     z-index: 4;
     opacity: 0;
     animation: loader-gone 800ms 1870.51ms both;
-    
-    
+   
     .oh{
         padding:1px;
         background-image: linear-gradient(90deg, $color-primary, $color-primary, $color-primary, $color-secondary);
@@ -47,6 +54,12 @@
         display: inline-block;
     animation: loader 1s ease-in-out 1s both;
     transform-origin: bottom center ;
+    }
+    @include tablette-only{
+        font-size: 5rem; 
+    }
+    @include desktop{
+        font-size: 7rem; 
     }
 }
 /*Boutons de fonctionnement*/
@@ -98,7 +111,7 @@
             flex-direction: row;
             -moz-column-gap: 4%;
                  column-gap: 4%;
-            width: 95%;
+            width: 80%;
             margin:auto;
         }
     }
@@ -113,7 +126,7 @@
         font-size: 1.1rem;
     }
     @include desktop{
-        height: 90px;
+        height: 85px;
         font-size: 1.3rem;
     }
         i{

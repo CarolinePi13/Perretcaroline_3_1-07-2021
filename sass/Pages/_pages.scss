@@ -1,8 +1,7 @@
 .block-page{
-    display: flex;
-    flex-direction: column;
+    
     width: 100%;
-    align-items: center;
+   
     background-color: $bgcolor-primary;
 }
 .display-menu{
@@ -22,13 +21,18 @@
     row-gap: 20px;
     animation: menu-block 700ms 500ms both;
     padding: 0 2% 0 2%;
-    &__btn{
-    @include menu-btn;
-    @include tablette-only{
-    height:90px;
-    max-width: 90%;
-    
+    @include desktop{
+        max-width: 95%;
     }
+    &__btn{
+        @include menu-btn;
+        &--1{animation: menu-block 700ms 400ms both;}
+        &--2{animation: menu-block 800ms 500ms both;}
+        &--3{animation: menu-block 900ms 600ms both;}
+        @include tablette-only{
+        height:90px;
+        max-width: 90%;
+        }
     }    
   
    
@@ -221,7 +225,20 @@
     padding-bottom: 2%;
     opacity: 0;
     font-family: $font-texte;
-   animation: menu-block 700ms 350ms both;
+    @include tablette-only{
+        max-width: 90%;
+    }
+    
+    
+        &__entrees{
+            animation: menu-block 500ms 400ms both;
+        }
+        &__plats{
+            animation: menu-block 600ms 500ms both;
+        }
+        &__desserts{
+            animation: menu-block 700ms 600ms both;
+        }
         &__title{
             text-transform: uppercase;
             font-size: 1rem;
@@ -238,6 +255,7 @@
                 font-size: 1.4rem;
                 margin-left: 4%;
                 width: 45px;
+                
             }
         }
 }
