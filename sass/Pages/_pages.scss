@@ -1,16 +1,16 @@
 .block-page{
-    
     width: 100%;
-   
     background-color: $bgcolor-primary;
 }
 .display-menu{
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
+    width: 100%;
+    
     @include desktop{
         flex-direction:row;
+        align-items: flex-start;
     }
 }
 .menu{
@@ -27,8 +27,8 @@
     &__btn{
         @include menu-btn;
         &--1{animation: menu-block 700ms 400ms both;}
-        &--2{animation: menu-block 800ms 500ms both;}
-        &--3{animation: menu-block 900ms 600ms both;}
+        &--2{animation: menu-block 800ms 600ms both;}
+        &--3{animation: menu-block 900ms 800ms both;}
         @include tablette-only{
         height:90px;
         max-width: 90%;
@@ -139,9 +139,12 @@
     flex-direction: column;
     
     &__img{
+        height: 280px;
         width:100%;
+        -o-object-fit: cover;
+               object-fit: cover;
         @include tablette-only{
-            height: 450px;
+            height: 350px;
         }
         @include desktop{
             height:350px;
@@ -188,7 +191,7 @@
                     -o-background-clip: text;
                     opacity: 0;
                     z-index: 1;
-                    animation: empty-heart 1s both;
+                    animation: empty-heart 500ms both;
                     }
                     &:hover, &:active{
                 
@@ -219,6 +222,7 @@
         }
     }
 }
+
 .block-menu{
     display: flex;
     flex-direction: column;

@@ -762,12 +762,13 @@ header img {
 .display-menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
+  width: 100%;
 }
 @media (min-width: 1025px) {
   .display-menu {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -796,10 +797,10 @@ header img {
   animation: menu-block 700ms 400ms both;
 }
 .menu__btn--2 {
-  animation: menu-block 800ms 500ms both;
+  animation: menu-block 800ms 600ms both;
 }
 .menu__btn--3 {
-  animation: menu-block 900ms 600ms both;
+  animation: menu-block 900ms 800ms both;
 }
 @media (min-width: 620px) and (max-width: 1024px) {
   .menu__btn {
@@ -924,11 +925,14 @@ header img {
   flex-direction: column;
 }
 .restau-pres__img {
+  height: 280px;
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 @media (min-width: 620px) and (max-width: 1024px) {
   .restau-pres__img {
-    height: 450px;
+    height: 350px;
   }
 }
 @media (min-width: 1025px) {
@@ -978,7 +982,7 @@ header img {
   -o-background-clip: text;
   opacity: 0;
   z-index: 1;
-  animation: empty-heart 1s both;
+  animation: empty-heart 500ms both;
 }
 .restau-pres__texte .heart:hover > .full, .restau-pres__texte .heart:active > .full {
   -webkit-animation: fill-heart 1s both;
