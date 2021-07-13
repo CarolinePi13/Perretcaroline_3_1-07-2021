@@ -19,8 +19,27 @@
     background-color: rgba($color: white, $alpha: 1);
     z-index: 4;
     opacity: 0;
-    animation: loader-gone 800ms 1870.51ms both;
-   
+    -webkit-animation: loader-gone 800ms 1870.51ms both;
+            animation: loader-gone 800ms 1870.51ms both;
+
+    .spinner {
+        width:100px;
+        height:100px;
+        border-radius:50%;
+        background:conic-gradient(#0000 10%,$color-primary);
+        -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 10px),#000 0);
+        -webkit-animation:spin 1s infinite linear;
+                animation:spin 1s infinite linear;
+
+        @include desktop{
+            width:200px;
+            height:200px;
+            background:conic-gradient(#0000 10%,$color-primary);
+            -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 20px),#000 0); 
+        }
+      }
+     
+   /*
     .oh{
         padding:1px;
         background-image: linear-gradient(90deg, $color-primary, $color-primary, $color-primary, $color-secondary);
@@ -55,6 +74,7 @@
     animation: loader 1s ease-in-out 1s both;
     transform-origin: bottom center ;
     }
+    */
     @include tablette-only{
         font-size: 5rem; 
     }
@@ -135,7 +155,7 @@
             padding-left: 10px;
         }
     
-        &:hover:active {
+        &:hover, &:active {
         background-color: $bgcolor-tertiary;
         i{
             color:$color-primary;
@@ -218,10 +238,11 @@
            @include desktop{
             font-size: 1.7rem;    
             }
-            &:hover:active{
+            &:hover, &:active{
                 
                 & > .full{
-                    animation: fill-heart 1s both;
+                    -webkit-animation: fill-heart 1s both;
+                            animation: fill-heart 1s both;
                     
                 }
                 
@@ -340,7 +361,7 @@ header{
         font-size: 0.9rem;
         z-index: 1;
         position: relative;
-            &:hover:active{
+            &:hover, &:active{
                 
                 &::after{
                 opacity: 1;
@@ -382,14 +403,16 @@ header{
     @include tablette-only{
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 3%;
+        -moz-column-gap: 3%;
+             column-gap: 3%;
         justify-content: center;
         
     }
     @include desktop{
         flex-direction: row;
         flex-wrap: wrap;
-        column-gap: 3%;
+        -moz-column-gap: 3%;
+             column-gap: 3%;
         justify-content: center;
         
     }

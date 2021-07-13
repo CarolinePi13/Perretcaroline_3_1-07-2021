@@ -44,19 +44,19 @@
         box-sizing: border-box;
         display: flex;
         padding: 10px 10px 10px 10px;
-        &:hover{ .btn-content__check{
+        &:hover, &:active{ .btn-content__check{
             animation: check-left 800ms ease-in-out both;
             @include tablette-only{
             animation: check-left-tablette 800ms ease-in-out both;   
             }
         }}
-        &:hover {.btn-content__check i{
+        &:hover, &:active {.btn-content__check i{
             animation: turn-check 800ms ease-in-out both;
         }}
-        &:hover{ .btn-content__price{
+        &:hover, &:active{ .btn-content__price{
             animation: check-left 800ms ease-in-out both; 
         }}
-        &:hover{ .btn-content__additional{
+        &:hover, &:active{ .btn-content__additional{
             width:80%;
         }}
       
@@ -189,7 +189,7 @@
                     opacity: 0;
                     z-index: 1;
                     }
-                    &:hover{
+                    &:hover, &:active{
                 
                         & > .full{
                             -webkit-animation: fill-heart 1s both;
@@ -288,7 +288,7 @@
     margin:45px;
     z-index: 1;
         position: relative;
-            &:hover{
+            &:hover, &:active{
                 
                 &::after{
                 content: "";
