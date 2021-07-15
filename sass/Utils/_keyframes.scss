@@ -1,3 +1,5 @@
+/* hearts fill-in*/
+
 @keyframes fill-heart{
     0% {
         
@@ -30,6 +32,7 @@
         opacity: 1;
     }
 }
+/* Fade-out of hearts*/
 @keyframes empty-heart {
     from{
         transform: scaleY(.95);
@@ -40,6 +43,7 @@
         opacity: 0;
     }
 }
+/* check on menues*/
 @keyframes check-left{
     0%{
         transform: translate(0);
@@ -47,26 +51,6 @@
     }
     100%{
         transform: translate(-60px,0);
-        
-    }
-}
-@keyframes check-left-reverse{
-    0%{
-        transform: translate(-60px,0);
-        
-    }
-    100%{
-        transform: translate(0);
-        
-    }
-}
-@keyframes check-left-tablette{
-    0%{
-        transform: translate(0);
-        
-    }
-    100%{
-        transform: translate(-70px,0);
         
     }
 }
@@ -83,6 +67,29 @@
         
     }
 }
+@keyframes check-left-tablette{
+    0%{
+        transform: translate(0);
+        
+    }
+    100%{
+        transform: translate(-70px,0);
+        
+    }
+}
+/* fade-out of checks on menues*/
+@keyframes check-left-reverse{
+    0%{
+        transform: translate(-60px,0);
+        
+    }
+    100%{
+        transform: translate(0);
+        
+    }
+}
+/* anim other loader OHMYFOOD */
+
 /*
 @keyframes loader{
     0%{
@@ -136,6 +143,8 @@
     }
   }
   */
+
+/* body fade-in on loading*/
   @keyframes opacity-body {
       from{
           opacity: 0;
@@ -144,6 +153,7 @@
       to{opacity: 1;
     }
   }
+/* loader goes away*/
 @keyframes loader-gone{
     0%{
         opacity:1;
@@ -160,6 +170,7 @@
         z-index: -99;
     }
 }
+/* menus come-in in pages */
 @keyframes menu-block{
     0%{
         opacity: 0;
@@ -174,6 +185,7 @@
         
     }
 }
+/*animation loader*/
 @-webkit-keyframes spin {to{opacity: 1;
     transform: rotate(1turn)}
   }

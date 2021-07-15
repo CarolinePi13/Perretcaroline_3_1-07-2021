@@ -1,4 +1,4 @@
-/* proprietes propres a l'index*/
+/* specific loader properties*/
 .loader-container{
     width: 100%;
 
@@ -6,8 +6,10 @@
 .block-page{
     &.index{
     opacity: 0;
-    animation: opacity-body 3s 1.5s both;}
+    -webkit-animation: opacity-body 3s 1.5s both;
+            animation: opacity-body 3s 1.5s both;}
 }
+/*loader and animations*/
 .loader{
     font-family: Shrikhand, cursive;
     box-sizing: border-box;
@@ -43,7 +45,7 @@
             mask:radial-gradient(farthest-side,#0000 calc(100% - 25px),#000 0);
         }
       }
-     
+/*animations alternate loader OHMYFOOD */  
    /*
     .oh{
         padding:1px;
@@ -87,7 +89,108 @@
         font-size: 7rem; 
     }
 }
-/*Boutons de fonctionnement*/
+/* Search bar */
+.search-bar{
+    box-shadow: inset 0 6px 9px -6px #cdcdcd;
+    display:flex;
+    justify-content: center;
+    background-color:$bgcolor-secondary;
+    width: 100%;
+    padding: 15px 0 15px 0;
+    @include tablette-only{
+        height: 25px;
+    }
+    @include desktop{
+        height: 25px;
+    }
+     &__input{
+         margin-left: 5px;
+        border:none;
+        background-color: $bgcolor-secondary;
+        width: 130px;
+        @include tablette-only{
+            font-size: 1.2rem;
+            width: 170px;
+            margin-left: 10px;
+        }
+        @include desktop{
+            font-size: 1.2rem;
+            width: 170px;
+            margin-left: 10px;
+        }
+     }
+     i{
+         @include tablette-only{
+         font-size: 1.4rem;}
+         @include desktop{
+            font-size: 1.4rem;}
+     }
+}
+/*Description of how the app works*/
+.intro{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    @include bg-clr1;
+    font-family: $font-texte;
+    padding-bottom: 55px;
+    padding-top: 30px;
+    &__title{
+        width: 70%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        @include tablette-only{
+        font-size: 1.9rem;
+        }
+        @include desktop{
+            font-size: 1.9rem;
+            }
+    }
+    &__text{
+        width: 90%;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-weight: lighter;
+        font-size: 1.1rem;
+        @include tablette-only{
+            font-size: 1.3rem;
+            }
+        @include desktop{
+            font-size: 1.3rem;
+            }
+    }
+    &__btn{
+        @include btn-couleur;
+        height: 50px;
+        width: 220px;
+        color:white;
+        font-weight: bold;
+        font-size: 0.9rem;
+        z-index: 1;
+        position: relative;
+            &:hover, &:active{
+                
+                &::after{
+                opacity: 1;
+                }
+            }
+            &::after{
+                @include lighter-btn;
+            }
+        @include tablette-only{
+            font-size: 1.1rem;
+            width: 250px;
+            height: 55px;
+            }
+            @include desktop{
+                font-size: 1.1rem;
+                width: 250px;
+                height: 55px;
+                }
+    }
+}
+/*fonctionnement buttons*/
 .fonctionnement{
     font-family: $font-texte;
     display: flex;
@@ -170,7 +273,47 @@
     }
     
 }
-/* Carte Restaurant*/
+/*properties of restaurants list*/
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    
+    padding-top: 30px;
+    margin-top: 60px;
+    @include bg-clr1;
+    
+    &__title{
+        font-family: $font-texte;
+        font-size: 1.4rem;
+        padding-left: 20px;
+        @include tablette-only{
+            padding-left: 30px;   }
+        @include desktop{
+            padding-left: 40px;   }
+    }
+    &__cards{
+    @include tablette-only{
+        flex-direction: row;
+        flex-wrap: wrap;
+        -moz-column-gap: 3%;
+             column-gap: 3%;
+        justify-content: center;
+        
+    }
+    @include desktop{
+        flex-direction: row;
+        flex-wrap: wrap;
+        -moz-column-gap: 3%;
+             column-gap: 3%;
+        justify-content: center;
+        
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+    
+   }
+/* Restaurant single card*/
 .card{
     @include carte-size;
     display: flex;
@@ -240,7 +383,8 @@
             opacity: 0;
             z-index: 1;
             right:10px;
-            animation: empty-heart 1s both;
+            -webkit-animation: empty-heart 1s both;
+                    animation: empty-heart 1s both;
             }
         
            @include desktop{
@@ -274,160 +418,9 @@
 }
 
 
-header{
-        .logo{display: flex;
-       justify-content: center;
-       align-items: center;}
-        
-        img{
-            height:auto;
-            width:170px;
-            @include tablette-only{
-             width: 220px;
-            }
-            @include desktop{
-                width: 220px;
-            }
-        }
-    
-}
-.search-bar{
-    box-shadow: inset 0 6px 9px -6px #cdcdcd;
-    display:flex;
-    justify-content: center;
-    background-color:$bgcolor-secondary;
-    width: 100%;
-    padding: 15px 0 15px 0;
-    @include tablette-only{
-        height: 25px;
-    }
-    @include desktop{
-        height: 25px;
-    }
-     &__input{
-         margin-left: 5px;
-        border:none;
-        background-color: $bgcolor-secondary;
-        width: 130px;
-        @include tablette-only{
-            font-size: 1.2rem;
-            width: 170px;
-            margin-left: 10px;
-        }
-        @include desktop{
-            font-size: 1.2rem;
-            width: 170px;
-            margin-left: 10px;
-        }
-     }
-     i{
-         @include tablette-only{
-         font-size: 1.4rem;}
-         @include desktop{
-            font-size: 1.4rem;}
-     }
-}
-.intro{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    @include bg-clr1;
-    font-family: $font-texte;
-    padding-bottom: 55px;
-    padding-top: 30px;
-    &__title{
-        width: 70%;
-        font-size: 1.5rem;
-        font-weight: bold;
-        @include tablette-only{
-        font-size: 1.9rem;
-        }
-        @include desktop{
-            font-size: 1.9rem;
-            }
-    }
-    &__text{
-        width: 90%;
-        margin-top: 0;
-        margin-bottom: 30px;
-        font-weight: lighter;
-        font-size: 1.1rem;
-        @include tablette-only{
-            font-size: 1.3rem;
-            }
-        @include desktop{
-            font-size: 1.3rem;
-            }
-    }
-    &__btn{
-        @include btn-couleur;
-        height: 50px;
-        width: 220px;
-        color:white;
-        font-weight: bold;
-        font-size: 0.9rem;
-        z-index: 1;
-        position: relative;
-            &:hover, &:active{
-                
-                &::after{
-                opacity: 1;
-                }
-            }
-            &::after{
-                @include lighter-btn;
-            }
-        @include tablette-only{
-            font-size: 1.1rem;
-            width: 250px;
-            height: 55px;
-            }
-            @include desktop{
-                font-size: 1.1rem;
-                width: 250px;
-                height: 55px;
-                }
-    }
-}
-.restaurants{
-    display: flex;
-    flex-direction: column;
-    
-    padding-top: 30px;
-    margin-top: 60px;
-    @include bg-clr1;
-    
-    &__title{
-        font-family: $font-texte;
-        font-size: 1.4rem;
-        padding-left: 20px;
-        @include tablette-only{
-            padding-left: 30px;   }
-        @include desktop{
-            padding-left: 40px;   }
-    }
-    &__cards{
-    @include tablette-only{
-        flex-direction: row;
-        flex-wrap: wrap;
-        -moz-column-gap: 3%;
-             column-gap: 3%;
-        justify-content: center;
-        
-    }
-    @include desktop{
-        flex-direction: row;
-        flex-wrap: wrap;
-        -moz-column-gap: 3%;
-             column-gap: 3%;
-        justify-content: center;
-        
-    }
-    display: flex;
-    flex-direction: column;
-    align-items: center;}
-    
-   }
+
+
+
+
 
 

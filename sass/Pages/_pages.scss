@@ -1,7 +1,115 @@
-.block-page{
-    width: 100%;
-    background-color: $bgcolor-primary;
+/*pages properties*/
+/*arrow return button*/
+.fleche{
+    border:none;
+    background-color: inherit;
+    position: absolute;
+    top:23px;
+    left:20px;
+    font-size: 1.3rem;
+    @include tablette-only{
+        font-size: 1.4rem;
+        top:27px;
+        left:20px;
+    }
+    @include desktop{
+        font-size: 1.4rem;
+        top:27px;
+        left:20px;
+    }
+    
+    
 }
+/*Title and image of single restaurants*/
+.restau-pres{ 
+    display: flex;
+    flex-direction: column;
+    
+    &__img{
+        height: 280px;
+        width:100%;
+        -o-object-fit: cover;
+               object-fit: cover;
+        @include tablette-only{
+            height: 350px;
+        }
+        @include desktop{
+            height:350px;
+            width:100%;
+            -o-object-fit: cover;
+               object-fit: cover;
+        }
+        
+    }
+    &__texte{
+        
+        border-radius: 30px 30px 0 0; 
+        display: flex;
+        justify-content: space-between;
+        background-color: $bgcolor-primary; 
+        width: 100%;
+        margin-top: -50px;
+        box-sizing: border-box;
+        padding: 20px;
+            h1{
+                margin: 0;
+            }  
+            .heart{
+                font-size: 1.2rem;
+                margin-right: 30px;
+                position: relative;
+                padding-top: 10px;
+                padding-right:5px;
+                .empty{
+                    position: absolute;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    -o-background-clip: text;
+                    z-index: 2;
+                    opacity: 1;}
+                    .full{
+                    position: absolute;
+                    background-image: linear-gradient(50deg,$color-primary,$color-secondary);
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    -o-background-clip: text;
+                    opacity: 0;
+                    z-index: 1;
+                    animation: empty-heart 500ms both;
+                    }
+                    &:hover, &:active{
+                
+                        & > .full{
+                            -webkit-animation: fill-heart 1s both;
+                                    animation: fill-heart 1s both;
+                        }
+                        
+                    }
+                @include tablette-only{
+                    font-size: 1.6rem;
+                    padding-right :10px;
+                }
+                @include desktop {
+                    font-size: 2rem;
+                    padding-right: 20px;
+                }
+            }
+    }
+    &__title{
+        font-family: $font-titres;
+        font-size: 1.5rem;
+        @include tablette-only{
+        font-size: 2.2rem;
+        }
+        @include desktop{
+            font-size: 2.3rem; 
+        }
+    }
+}
+/* parent of entree plat dessert*/
 .display-menu{
     display: flex;
     flex-direction: column;
@@ -13,6 +121,50 @@
         align-items: flex-start;
     }
 }
+/* block entree /plat / dessert includes the title and .menu*/
+.block-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: $bgcolor-primary;
+    width:100%;
+    padding-bottom: 2%;
+    opacity: 0;
+    font-family: $font-texte;
+    @include tablette-only{
+        max-width: 90%;
+    }
+    
+    
+        &__entrees{
+            animation: menu-block 500ms 400ms both;
+        }
+        &__plats{
+            animation: menu-block 600ms 500ms both;
+        }
+        &__desserts{
+            animation: menu-block 700ms 600ms both;
+        }
+        &__title{
+            text-transform: uppercase;
+            font-size: 1rem;
+            padding-bottom: 5px;
+            border-bottom: 3px solid $color-tertiary;
+            width: 35px;
+            margin-left: 5%;
+
+            @include tablette-only{
+                font-size: 1.4rem;
+                width: 45px;
+            }
+            @include desktop{
+                font-size: 1.4rem;
+                margin-left: 4%;
+                width: 45px;
+                
+            }
+        }
+}
+/*child of block-menu and container on menu-btn*/
 .menu{
     display: flex;
     flex-direction: column;
@@ -37,6 +189,7 @@
   
    
 }
+/* contents of single buttons*/
 .btn-content{
         height: 100%;
         overflow: hidden;
@@ -134,158 +287,11 @@
         }
     }
 }
-.restau-pres{ 
-    display: flex;
-    flex-direction: column;
-    
-    &__img{
-        height: 280px;
-        width:100%;
-        -o-object-fit: cover;
-               object-fit: cover;
-        @include tablette-only{
-            height: 350px;
-        }
-        @include desktop{
-            height:350px;
-            width:100%;
-            -o-object-fit: cover;
-               object-fit: cover;
-        }
-        
-    }
-    &__texte{
-        
-        border-radius: 30px 30px 0 0; 
-        display: flex;
-        justify-content: space-between;
-        background-color: $bgcolor-primary; 
-        width: 100%;
-        margin-top: -50px;
-        box-sizing: border-box;
-        padding: 20px;
-            h1{
-                margin: 0;
-            }  
-            .heart{
-                font-size: 1.2rem;
-                margin-right: 30px;
-                position: relative;
-                padding-top: 10px;
-                padding-right:5px;
-                .empty{
-                    position: absolute;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                    -o-background-clip: text;
-                    z-index: 2;
-                    opacity: 1;}
-                    .full{
-                    position: absolute;
-                    background-image: linear-gradient(50deg,$color-primary,$color-secondary);
-                    color: transparent;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                    -o-background-clip: text;
-                    opacity: 0;
-                    z-index: 1;
-                    animation: empty-heart 500ms both;
-                    }
-                    &:hover, &:active{
-                
-                        & > .full{
-                            -webkit-animation: fill-heart 1s both;
-                                    animation: fill-heart 1s both;
-                        }
-                        
-                    }
-                @include tablette-only{
-                    font-size: 1.6rem;
-                    padding-right :10px;
-                }
-                @include desktop {
-                    font-size: 2rem;
-                    padding-right: 20px;
-                }
-            }
-    }
-    &__title{
-        font-family: $font-titres;
-        font-size: 1.5rem;
-        @include tablette-only{
-        font-size: 2.2rem;
-        }
-        @include desktop{
-            font-size: 2.3rem; 
-        }
-    }
-}
 
-.block-menu{
-    display: flex;
-    flex-direction: column;
-    background-color: $bgcolor-primary;
-    width:100%;
-    padding-bottom: 2%;
-    opacity: 0;
-    font-family: $font-texte;
-    @include tablette-only{
-        max-width: 90%;
-    }
-    
-    
-        &__entrees{
-            animation: menu-block 500ms 400ms both;
-        }
-        &__plats{
-            animation: menu-block 600ms 500ms both;
-        }
-        &__desserts{
-            animation: menu-block 700ms 600ms both;
-        }
-        &__title{
-            text-transform: uppercase;
-            font-size: 1rem;
-            padding-bottom: 5px;
-            border-bottom: 3px solid $color-tertiary;
-            width: 35px;
-            margin-left: 5%;
 
-            @include tablette-only{
-                font-size: 1.4rem;
-                width: 45px;
-            }
-            @include desktop{
-                font-size: 1.4rem;
-                margin-left: 4%;
-                width: 45px;
-                
-            }
-        }
-}
 
-.fleche{
-    border:none;
-    background-color: inherit;
-    position: absolute;
-    top:23px;
-    left:20px;
-    font-size: 1.3rem;
-    @include tablette-only{
-        font-size: 1.4rem;
-        top:27px;
-        left:20px;
-    }
-    @include desktop{
-        font-size: 1.4rem;
-        top:27px;
-        left:20px;
-    }
-    
-    
-}
+
+
 .btn-order{
     @include btn-couleur;
     width: 185px;

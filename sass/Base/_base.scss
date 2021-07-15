@@ -1,10 +1,13 @@
+/* Code en commun des pages et index */
+
+
 a{
     text-decoration: none;
     color: black;
 }
 
 .block-page {
-    
+    background-color: $bgcolor-primary;
     width: 100%;
     @include bigDesktop{
         max-width: 1600px;
@@ -17,6 +20,30 @@ body{
     margin: 0;
    
 }
+/*Header commun pages et index*/
+header{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: relative;
+}
+header{
+    .logo{display: flex;
+   justify-content: center;
+   align-items: center;}
+    
+    img{
+        height:auto;
+        width:170px;
+        @include tablette-only{
+         width: 220px;
+        }
+        @include desktop{
+            width: 220px;
+        }
+    }
+
+}
+/*Footer commun index et pages */
 footer{
   background-color: #353535;  
   color: white;
@@ -65,8 +92,3 @@ footer{
     }
 }
 
-header{
-    padding-top: 20px;
-    padding-bottom: 10px;
-    position: relative;
-}
