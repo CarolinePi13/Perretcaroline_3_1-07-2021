@@ -1,8 +1,5 @@
 /* specific loader properties*/
-.loader-container{
-    width: 100%;
 
-}
 .block-page{
     &.index{
         
@@ -27,7 +24,9 @@
     opacity: 0;
     -webkit-animation: loader-gone 800ms 1870.51ms both;
             animation: loader-gone 800ms 1870.51ms both;
-
+    @include desktop{
+        width: 1600px;
+    }
     .spinner {
         width:100px;
         height:100px;

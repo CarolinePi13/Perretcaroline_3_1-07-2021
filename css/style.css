@@ -301,10 +301,6 @@ footer ul li a {
 }
 
 /* specific loader properties*/
-.loader-container {
-  width: 100%;
-}
-
 .block-page.index {
   opacity: 0;
   -webkit-animation: opacity-body 3s 1.5s both;
@@ -365,6 +361,11 @@ footer ul li a {
    transform-origin: bottom center ;
    }
    */
+}
+@media (min-width: 1025px) {
+  .loader {
+    width: 1600px;
+  }
 }
 .loader .spinner {
   width: 100px;
