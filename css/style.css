@@ -208,6 +208,12 @@ body {
   width: 100%;
   margin: 0;
 }
+@media (min-width: 1600px) {
+  body {
+    max-width: 1600px;
+    margin: auto;
+  }
+}
 
 /*Header commun pages et index*/
 header {
@@ -534,16 +540,10 @@ footer ul li a {
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
-}
-@media (min-width: 620px) and (max-width: 1024px) {
-  .fonctionnement {
-    width: 99%;
-  }
-}
-@media (min-width: 1025px) {
-  .fonctionnement {
-    width: 99%;
-  }
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: white;
+  width: 100%;
 }
 .fonctionnement__title {
   padding-left: 20px;

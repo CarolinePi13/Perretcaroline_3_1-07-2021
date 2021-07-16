@@ -5,6 +5,7 @@
 }
 .block-page{
     &.index{
+        
     opacity: 0;
     -webkit-animation: opacity-body 3s 1.5s both;
             animation: opacity-body 3s 1.5s both;}
@@ -195,13 +196,11 @@
     font-family: $font-texte;
     display: flex;
     flex-direction: column;
-    
-    @include tablette-only{
-        width: 99%;          
-    }
-    @include desktop{
-        width: 99%;          
-    }
+    padding-top: 30px;
+    padding-bottom: 50px;
+    background-color: white;
+    width: 100%;  
+
     
     &__title{
         padding-left: 20px;
