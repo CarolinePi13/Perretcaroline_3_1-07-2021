@@ -221,7 +221,6 @@ header {
   padding-bottom: 10px;
   position: relative;
 }
-
 header .logo {
   display: flex;
   justify-content: center;
@@ -362,7 +361,7 @@ footer ul li a {
    }
    */
 }
-@media (min-width: 1025px) {
+@media (min-width: 1600px) {
   .loader {
     width: 1600px;
   }

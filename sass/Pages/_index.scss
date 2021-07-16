@@ -24,7 +24,7 @@
     opacity: 0;
     -webkit-animation: loader-gone 800ms 1870.51ms both;
             animation: loader-gone 800ms 1870.51ms both;
-    @include desktop{
+    @include bigDesktop{
         width: 1600px;
     }
     .spinner {
