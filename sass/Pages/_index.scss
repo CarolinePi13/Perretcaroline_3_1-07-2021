@@ -113,17 +113,12 @@
             width: 170px;
             margin-left: 10px;
         }
-        @include desktop{
-            font-size: 1.2rem;
-            width: 170px;
-            margin-left: 10px;
-        }
+       
      }
      i{
          @include tablette-only{
          font-size: 1.4rem;}
-         @include desktop{
-            font-size: 1.4rem;}
+        
      }
 }
 /*Description of how the app works*/
@@ -143,9 +138,7 @@
         @include tablette-only{
         font-size: 1.9rem;
         }
-        @include desktop{
-            font-size: 1.9rem;
-            }
+        
     }
     &__text{
         width: 90%;
@@ -156,9 +149,7 @@
         @include tablette-only{
             font-size: 1.3rem;
             }
-        @include desktop{
-            font-size: 1.3rem;
-            }
+        
     }
     &__btn{
         @include btn-couleur;
@@ -183,11 +174,7 @@
             width: 250px;
             height: 55px;
             }
-            @include desktop{
-                font-size: 1.1rem;
-                width: 250px;
-                height: 55px;
-                }
+            
     }
 }
 /*fonctionnement buttons*/
@@ -252,7 +239,7 @@
         font-size: 1.1rem;
     }
     @include desktop{
-        height: 85px;
+        
         font-size: 1.3rem;
     }
         i{
@@ -275,9 +262,8 @@
 .restaurants{
     display: flex;
     flex-direction: column;
-    
     padding-top: 30px;
-    margin-top: 60px;
+    margin-top: 30px;
     @include bg-clr1;
     
     &__title{
@@ -323,7 +309,7 @@
         width:45%;  
     }
     @include desktop{
-        width: 45%;
+        
         height: 350px;
     }
     img{
@@ -350,9 +336,7 @@
         z-index: 2;
         top: 0.8rem;
         right: 1.5rem;  
-        @include tablette-only{
-            
-        }
+       
     }
     &__text{
         display: flex;

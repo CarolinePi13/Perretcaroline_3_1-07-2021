@@ -12,11 +12,7 @@
         top:27px;
         left:20px;
     }
-    @include desktop{
-        font-size: 1.4rem;
-        top:27px;
-        left:20px;
-    }
+   
     
     
 }
@@ -35,7 +31,7 @@
             height: 350px;
         }
         @include desktop{
-            height:350px;
+            
             width:100%;
             -o-object-fit: cover;
                object-fit: cover;
@@ -120,7 +116,9 @@
     @include desktop{
         flex-direction:row;
         align-items: flex-start;
+        
     }
+    
 }
 /* block entree /plat / dessert includes the title and .menu*/
 .block-menu{
@@ -134,7 +132,9 @@
     @include tablette-only{
         max-width: 90%;
     }
-    
+    @include desktop{
+        max-width: 100%;
+    }
     
         &__entrees{
             animation: menu-block 500ms 400ms both;
@@ -157,11 +157,8 @@
                 font-size: 1.4rem;
                 width: 45px;
             }
-            @include desktop{
-                font-size: 1.4rem;
+            @include desktop{             
                 margin-left: 4%;
-                width: 45px;
-                
             }
         }
 }
@@ -175,7 +172,8 @@
     animation: menu-block 700ms 500ms both;
     padding: 0 2% 0 2%;
     @include desktop{
-        max-width: 95%;
+        max-width: 99%;
+        padding: 0;
     }
     &__btn{
         @include menu-btn;
@@ -185,6 +183,9 @@
         @include tablette-only{
         height:90px;
         max-width: 90%;
+        }
+        @include desktop{
+            height: 80px;
         }
     }    
   
@@ -210,15 +211,23 @@
         &:hover, &:active{ .btn-content__price{
             animation: check-left 800ms ease-in-out both; 
         }}
-        &:hover, &:active{ .btn-content__additional{
+        &:hover, &:active{ .btn-content__additional, .btn-content__title{
             width:80%;
         }}
       
-    &__title{font-size: 1rem;
+    &__title{font-size: 0.9rem;
             font-weight: bold;
             margin: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
             @include tablette-only{
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+            @include desktop{
+            font-weight: bold;
+            font-size: 1.1rem;
             }
              }    
     &__details{
@@ -240,6 +249,9 @@
         @include tablette-only{
             font-size: 1.1rem;
         }
+        @include desktop{
+            font-size: 0.8rem;
+        }
         }
         
     &__price{
@@ -256,6 +268,9 @@
         }
         @include tablette-only{
             font-size: 1.3rem;
+        }
+        @include desktop{
+            font-size: 1rem;
         }
     }
     &__check{
@@ -275,6 +290,11 @@
             height:90px;
             width: 70px;
             margin:-10px -80px -15px -10px;
+        }
+        @include desktop
+        {
+            height:80px;
+           
         }
         i{
             color: white;
@@ -315,11 +335,7 @@
         height: 75px; 
         font-size: 1.5rem;  
     }
-    @include desktop{
-        width: 278px;
-        height: 75px; 
-        font-size: 1.5rem;  
-    }
+  
 }
 .btn-center{
     display: flex;
