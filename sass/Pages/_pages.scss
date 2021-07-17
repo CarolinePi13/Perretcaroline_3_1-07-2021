@@ -215,7 +215,7 @@
             width:80%;
         }}
       
-    &__title{font-size: 0.9rem;
+    &__title{font-size: 1.1rem;
             font-weight: bold;
             margin: 0;
             text-overflow: ellipsis;
@@ -239,10 +239,11 @@
         @include desktop{
         align-items: flex-start;}
        }
-    &__additional{font-size: 0.8rem;
-            margin-bottom: 0;
-            margin-top:13px;
-            text-overflow: ellipsis;
+    &__additional{font-size: 0.9rem;
+        font-weight: 100;
+        margin-bottom: 0;
+        margin-top:13px;
+        text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
             
@@ -259,6 +260,7 @@
         display: flex; 
         width: 15%;
         height: 100%;
+        font-weight: 500;
         align-items:flex-end;
         justify-content: center;
         padding: 0 15px 0 0;

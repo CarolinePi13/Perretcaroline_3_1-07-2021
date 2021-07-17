@@ -207,7 +207,6 @@ a {
 @media (min-width: 1600px) {
   .block-page {
     max-width: 1600px;
-    margin: auto;
   }
 }
 
@@ -242,11 +241,6 @@ header img {
     width: 220px;
   }
 }
-@media (min-width: 1025px) {
-  header img {
-    width: 220px;
-  }
-}
 
 /*Footer commun index et pages */
 footer {
@@ -256,14 +250,22 @@ footer {
   flex-direction: column;
   font-family: "Roboto", sans-serif;
   padding: 25px;
+  width: 100%;
 }
 @media (min-width: 1025px) {
   footer {
-    padding: 40px;
+    padding: 25px 0px 25px 0px;
+  }
+}
+@media (min-width: 1025px) and (min-width: 1600px) {
+  footer {
+    max-width: 1600px;
   }
 }
 footer .logo-blanc {
   font-family: "Shrikhand", cursive;
+  padding-left: 25px;
+  font-size: 1.2rem;
 }
 @media (min-width: 620px) {
   footer .logo-blanc {
@@ -273,26 +275,19 @@ footer .logo-blanc {
 @media (min-width: 1025px) {
   footer .logo-blanc {
     font-size: 2rem;
+    width: 90%;
   }
 }
 footer ul {
   list-style: none;
-  padding: 0;
+  padding: 0px 0px 25px 25px;
 }
 @media (min-width: 1025px) {
   footer ul {
+    width: 90%;
     display: flex;
     justify-content: space-between;
   }
-}
-@media (min-width: 620px) {
-  footer ul {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-footer ul li {
-  padding-bottom: 8px;
 }
 @media (min-width: 1025px) {
   footer ul li {
@@ -308,9 +303,14 @@ footer ul li a {
 
 /* specific loader properties*/
 .block-page.index {
+  max-width: 1600px;
   opacity: 0;
   -webkit-animation: opacity-body 3s 1.5s both;
   animation: opacity-body 3s 1.5s both;
+}
+
+main {
+  width: 100%;
 }
 
 /*loader and animations*/
@@ -441,7 +441,7 @@ footer ul li a {
   }
 }
 
-/*Description of how the app works*/
+/*Description of what the app does*/
 .intro {
   display: flex;
   align-items: center;
@@ -522,6 +522,8 @@ footer ul li a {
   padding-bottom: 50px;
   background-color: white;
   width: 100%;
+  /* box containing the btns */
+  /*single btn property*/
 }
 .fonctionnement__title {
   padding-left: 20px;
@@ -662,6 +664,7 @@ footer ul li a {
   position: relative;
   margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
+  /* contains image caption and heart anim*/
 }
 @media (min-width: 620px) {
   .card {
@@ -1003,7 +1006,7 @@ footer ul li a {
   width: 80%;
 }
 .btn-content__title {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
   text-overflow: ellipsis;
@@ -1034,7 +1037,8 @@ footer ul li a {
   }
 }
 .btn-content__additional {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 100;
   margin-bottom: 0;
   margin-top: 13px;
   text-overflow: ellipsis;
@@ -1056,6 +1060,7 @@ footer ul li a {
   display: flex;
   width: 15%;
   height: 100%;
+  font-weight: 500;
   align-items: flex-end;
   justify-content: center;
   padding: 0 15px 0 0;

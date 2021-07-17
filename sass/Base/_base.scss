@@ -16,7 +16,7 @@ a{
     }
     @include bigDesktop{
         max-width: 1600px;
-        margin: auto;
+        
      }
 }
 
@@ -35,8 +35,8 @@ header{
     padding-bottom: 10px;
     position: relative;
     .logo{display: flex;
-   justify-content: center;
-   align-items: center;}
+    justify-content: center;
+    align-items: center;}
     
     img{
         height:auto;
@@ -44,57 +44,61 @@ header{
         @include tablette-only{
          width: 220px;
         }
-        @include desktop{
-            width: 220px;
-        }
+      
     }
 
 }
 /*Footer commun index et pages */
 footer{
-  background-color: #353535;  
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-family: $font-texte;
+    background-color: #353535;  
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-texte;
     padding: 25px;
+    width: 100%;
     @include desktop{
-    padding: 40px;
+    padding: 25px 0px 25px 0px;
+    
+    @include bigDesktop{
+        max-width: 1600px;
     }
+}
 
-   .logo-blanc{
-    font-family: "Shrikhand", cursive;
-    @include tablette-only{
-        font-size:1.5rem;
-    }
-    @include desktop{
-        font-size: 2rem;
-    }
+    .logo-blanc{
+        font-family: "Shrikhand", cursive;
+        padding-left: 25px;
+        font-size: 1.2rem;
+        @include tablette-only{
+            font-size:1.5rem;
+        }
+        @include desktop{
+            font-size: 2rem;
+            width: 90%;
+        }
     }
 
     ul{
         list-style: none;
-        padding: 0;
+        padding:0px 0px 25px 25px;
         @include desktop{
+        width: 90%;
         display: flex;
         justify-content: space-between;}
-        @include tablette-only{
-        display: flex;
-        justify-content: space-between;       
-        }
+                
         
-        li{
-            padding-bottom: 8px;
-            @include desktop{
+    li{
+        
+        @include desktop{
             font-size: 1.3rem;
             }
-            i{
-                padding-right:10px;
-                
+        i{
+            padding-right:10px;
+                    
             }
-            a{
-                color: white;
-            }
+        a{
+                    color: white;
+        }
         }
     }
 }
