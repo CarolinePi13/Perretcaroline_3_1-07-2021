@@ -16,7 +16,6 @@
     
     
 }
-
 /*Title and image of single restaurants*/
 .restau-pres{ 
     display: flex;
@@ -148,6 +147,8 @@
         &__title{
             text-transform: uppercase;
             font-size: 1rem;
+            font-weight: 100;
+            
             padding-bottom: 5px;
             border-bottom: 3px solid $color-tertiary;
             width: 35px;
@@ -199,6 +200,7 @@
         box-sizing: border-box;
         display: flex;
         padding: 10px 10px 10px 10px;
+        
         &:hover, &:active{ .btn-content__check{
             animation: check-left 800ms ease-in-out both;
             @include tablette-only{
@@ -213,6 +215,7 @@
         }}
         &:hover, &:active{ .btn-content__additional, .btn-content__title{
             width:80%;
+            
         }}
       
     &__title{font-size: 1.1rem;
@@ -236,6 +239,7 @@
         justify-content: space-between;
         flex-direction: column;
         overflow: hidden;
+        
         @include desktop{
         align-items: flex-start;}
        }
@@ -264,6 +268,7 @@
         align-items:flex-end;
         justify-content: center;
         padding: 0 15px 0 0;
+        animation: check-left-reverse 800ms ease both; 
         p{
             box-sizing: inherit;
             margin:0;
@@ -286,7 +291,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        animation: check-left-reverse 800ms ease-in-out both; 
+        animation: check-left-reverse 800ms ease both; 
         @include tablette-only
         {
             height:90px;
@@ -310,11 +315,6 @@
         }
     }
 }
-
-
-
-
-
 .btn-order{
     @include btn-couleur;
     width: 185px;

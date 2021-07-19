@@ -25,31 +25,14 @@ main{
     background-color: rgba($color: white, $alpha: 1);
     z-index: 4;
     opacity: 0;
-    -webkit-animation: loader-gone 800ms 1870.51ms both;
-            animation: loader-gone 800ms 1870.51ms both;
+    -webkit-animation: loader-gone 800ms 2s both;
+            animation: loader-gone 800ms 2s both;
     @include bigDesktop{
         width: 1600px;
     }
-    .spinner {
-        width:100px;
-        height:100px;
-        border-radius:50%;
-        background:conic-gradient(#0000 10%,$color-secondary, $color-primary);
-        -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 10px),#000 0);
-        mask:radial-gradient(farthest-side,#0000 calc(100% - 10px),#000 0);
-        -webkit-animation:spin 1s infinite linear;
-                animation:spin 1s infinite linear;
-
-        @include desktop{
-            width:200px;
-            height:200px;
-            background:conic-gradient(#0000 10%,$color-secondary,$color-primary);
-            -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 25px),#000 0); 
-            mask:radial-gradient(farthest-side,#0000 calc(100% - 25px),#000 0);
-        }
-      }
+ 
 /*animations alternate loader OHMYFOOD */  
-   /*
+   
     .oh{
         padding:1px;
         background-image: linear-gradient(90deg, $color-primary, $color-primary, $color-primary, $color-secondary);
@@ -70,7 +53,7 @@ main{
         color: rgba($color:white, $alpha: 0.2);
         opacity:0;
         display: inline-block;
-    animation: loader 1s ease-in-out 700ms both;
+    animation: loader-my 1s ease-in-out 700ms both;
     transform-origin: bottom center ;
     }
     .food{
@@ -84,7 +67,7 @@ main{
     animation: loader 1s ease-in-out 1s both;
     transform-origin: bottom center ;
     }
-    */
+    
     @include tablette-only{
         font-size: 5rem; 
     }
