@@ -101,29 +101,8 @@
        
     }
   }
-  @keyframes loader-my{
-    0%{
-      transform: scaleY(0.5) translate(0, -800px);
-      opacity:1;
-    }
-    30%{
-      transform: scaleY(1.3);
-      
-    }
-    60%{
-      transform: scaleY(1.7);
-      
-    }
-    80%{
-      transform: scaleY(0.9);
-      
-    }
-    100%{
-       transform: scaleY(1);
-       opacity:1;
-       
-    }
-  }
+
+  
   
 
 /* body fade-in on loading*/

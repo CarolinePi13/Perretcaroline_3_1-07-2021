@@ -32,40 +32,30 @@ main{
     }
  
 /*animations alternate loader OHMYFOOD */  
-   
-    .oh{
-        padding:1px;
-        background-image: linear-gradient(90deg, $color-primary, $color-primary, $color-primary, $color-secondary);
+    .oh, .my, .food{
         background-clip: text;
         -webkit-background-clip: text;
-        color: rgba($color:white, $alpha: 0.2);
-        opacity:0;
+        color: rgba($color:white, $alpha: 0.2); 
+        opacity: 0;
         display: inline-block;
-    animation: loader 1s ease-in-out 500ms both;
-    transform-origin: bottom center ;
- 
+        transform-origin: bottom center ;
+    }
+    .oh{
+        padding:1px;
+        background-image: linear-gradient(90deg, $color-primary, $color-primary, $color-primary, $color-secondary);  
+        animation: loader 1200ms ease-in-out 500ms both;
+        transform-origin: bottom center ;
     }
     .my{
         padding:1px;
         background-image: linear-gradient(90deg, $color-secondary, $color-secondary, $color-secondary, lighten($color-secondary, 2%));
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: rgba($color:white, $alpha: 0.2);
-        opacity:0;
-        display: inline-block;
-    animation: loader-my 1s ease-in-out 700ms both;
-    transform-origin: bottom center ;
+        animation: loader 1200ms ease-in-out 700ms both;
+        transform-origin: bottom center ;
     }
     .food{
         padding:1px 6px 1px 1px;
         background-image: linear-gradient(90deg, $color-secondary, $color-secondary, $color-primary, $color-primary);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: rgba($color:white, $alpha: 0.2);
-        opacity:0;
-        display: inline-block;
-    animation: loader 1s ease-in-out 1s both;
-    transform-origin: bottom center ;
+        animation: loader 1200ms ease-in-out 1s both;
     }
     
     @include tablette-only{
